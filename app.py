@@ -10,7 +10,7 @@ import re
 import numpy as np
 
 # Keras
-
+from tensorflow.keras.applications.imagenet_utils import preprocess_input, decode_predictions
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 import joblib
@@ -18,7 +18,7 @@ import joblib
 # Flask utils
 from flask import Flask, redirect, url_for, request, render_template
 from werkzeug.utils import secure_filename
-from gevent.pywsgi import WSGIServer
+#from gevent.pywsgi import WSGIServer
 
 # Define a flask app
 app = Flask(__name__)
